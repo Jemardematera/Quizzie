@@ -18,11 +18,8 @@
         <!-- Styles -->
         <style>
             .picture {
-                background-image: url("../images/bgk5.gif");
+                
                 height: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
                 color: darkgray;
                 font-family: 'Century', sans-serif;
                 font-weight: 200;
@@ -63,32 +60,35 @@
         </style>
     </head>
     <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style = "color: Teal !important; font-family: Original Surfer; font-size: 30px">
+    <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('/') }}" style = "color:#f58634 !important; font-family: Original Surfer; font-size: 25px">
                     {{ config('app.name', 'Laravel') }}
+     
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-
+                    
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav">
                         <!-- Authentication Links -->
+                        
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}"style = "color: Teal !important; font-family: Original Surfer; font-size: 18px">
-                                {{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"style = "color: #f58634  !important; font-family: Arial; font-size: 15px">
+                                {{ __('Login |') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"style = "color: Teal !important; font-family: Original Surfer; font-size: 18px">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"style = "color: #f58634 !important; font-family:Arial; font-size: 15px">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -108,6 +108,8 @@
                                         @csrf
                                     </form>
                                 </div>
+
+                                
                             </li>
                         @endguest
                     </ul>
@@ -118,13 +120,15 @@
         <div class="picture flex-center position-ref full-height">
            
             <div class="content">
-                <div class="title " Style = "margin-top: 140px; color: white; font-family: Original Surfer; font-size:25px">
-                    Quizzie 
+                <div class="title " Style = "margin-top: 0px; color: #2f5d62; font-family:Microsoft JhengHei UI Light; font-size:100px">
+                    
+                    
                 </div>
-
+                
                 
             </div>
         </div>
+        
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
