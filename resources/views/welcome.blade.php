@@ -18,7 +18,7 @@
         <!-- Styles -->
         <style>
             .picture {
-                background-image: url("../images/backg.gif");
+                background-image: url("../images/backg.bgk5");
                 height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
