@@ -83,12 +83,12 @@
                         
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}"style = "color: #f58634  !important; font-family: Arial; font-size: 15px">
+                                <a class="nav-link" href="{{ route('login') }}"style = "color: white !important; font-family: Arial; font-size: 15px">
                                 {{ __('Login |') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"style = "color: #f58634 !important; font-family:Arial; font-size: 15px">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"style = "color: white !important; font-family:Arial; font-size: 15px">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
