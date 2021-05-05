@@ -18,7 +18,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home" Style = " color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
+            <a class="navbar-brand" href="/home"
+                Style=" color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,28 +29,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/home" Style = " color: white;  font-size:15px "> Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home"
+                            Style=" color: white;  font-size:15px "> Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" Style = " color: white;  font-size:15px ">
+                            data-bs-toggle="dropdown" aria-expanded="false" Style=" color: white;  font-size:15px ">
                             Your Library
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/studysets/all">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
-                          
+
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false"Style = " color: white;  font-size:15px ">
+                            data-bs-toggle="dropdown" aria-expanded="false" Style=" color: white;  font-size:15px ">
                             Create
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="studysets/create">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
-                              
+
                         </ul>
                     </li>
                 </ul>
@@ -58,38 +60,36 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        @if(Route::has('register'))
+                        @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link"
-                                    href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
 
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" Style = " color: white;  font-size:15px ">
-                            {{ Auth::user()->name }}
-                        </a>
-                        
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                     
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" Style=" color: white;  font-size:15px ">
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+
                     @endguest
                 </ul>
             </div>
@@ -104,8 +104,9 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card">
-                        <div class="card-header"Style = " background-color: #ffb037; ">
-                            <div class="panel-heading text-center" Style = " color: white;  font-size:15px"><b> Total of Study sets</b>
+                        <div class="card-header" Style=" background-color: #ffb037; ">
+                            <div class="panel-heading text-center" Style=" color: white;  font-size:15px"><b> Total of
+                                    Study sets</b>
 
                             </div>
 
@@ -124,8 +125,9 @@
                 </div>
                 <div class="col-4">
                     <div class="card">
-                        <div class="card-header"Style = " background-color: #ffcc29; ">
-                            <div class="panel-heading text-center"Style = " color: white;  font-size:15px"><b> Total of Class</b>
+                        <div class="card-header" Style=" background-color: #ffcc29; ">
+                            <div class="panel-heading text-center" Style=" color: white;  font-size:15px"><b> Total of
+                                    Class</b>
 
                             </div>
                         </div>
@@ -141,8 +143,10 @@
                 </div>
                 <div class="col-4 ">
                     <div class="card">
-                        <div class="card-header"Style = " background-color: #81b214; ">
-                            <div class="panel-heading text-center"Style = " color: white;  font-size:15px"><b>Pending Student</b>
+                        <div class="card-header" Style=" background-color: #81b214; ">
+                            <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
+                                <img src="images/icon.png" style="width: 50px;" />
+                                <b>Pending Student</b>
 
                             </div>
                         </div>
@@ -161,31 +165,64 @@
 
                 <div class="col-12 - mt-5">
                     <div class="card">
-                        <div class="card-header"Style = " background-color: white; ">
-                            <div class="panel-heading text-right"Style = " color: #206a5d;  font-size:15px"><b>Recent</b>
+                        <div class="card-header" Style=" background-color: white; ">
+                            <div class="panel-heading text-right" Style=" color: #206a5d;  font-size:15px"><b>Recent</b>
 
                             </div>
                         </div>
                         <div class="card-body">
-                    
-                            
-                            <blockquote class="blockquote mb-0">
 
-                            </blockquote>
+                            <div class="col-12 mt-2">
+                                <div class="container">
+
+                                    <div class="row">
+
+                                        @foreach ($studySets as $studySet)
+                                            <div class="col-4">
+                                                <div class="card mt-2">
+                                                    <div class="card-header" Style=" background-color: #ffb037; ">
+                                                        <div class="panel-heading text-center"
+                                                            Style=" color: white;  font-size:15px">
+                                                            <b> {{ $studySet->title }} </b>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="card-body ">
+
+                                                        <blockquote class="blockquote mb-0">
+                                                            <div class="panel-heading text-center"><b>
+                                                                    {{ $studySet->description }} </b>
+
+                                                            </div>
+
+                                                        </blockquote>
+
+                                                        {{ Auth::user()->name }}
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        @endforeach
+                                    </div>
+
+
+                                    <blockquote class="blockquote mb-0">
+
+                                    </blockquote>
+                                </div>
+                            </div>
+
+
                         </div>
+
                     </div>
-
-
                 </div>
-
             </div>
         </div>
-    </div>
-    </div>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-    </script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

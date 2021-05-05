@@ -52,7 +52,6 @@ Route::post('/studysets/store', function (Request $request) {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/studysets/all', function () {
@@ -62,3 +61,11 @@ Route::get('/studysets/all', function () {
     return view('study_sets.all',['studySets' => $studySets]);
 });
 
+
+
+Route::get('/home', function () {
+
+    $studySets = StudySet::all();
+
+    return view('Home',['studySets' => $studySets]);
+});

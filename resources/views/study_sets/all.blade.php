@@ -61,13 +61,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        @if(Route::has('register'))
+                        @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link"
-                                    href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
@@ -82,11 +80,10 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <form id="logout-form" action="{{ route('logout') }}"
-                                        method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </li>
@@ -103,29 +100,31 @@
         <div class="container">
 
             <div class="row">
-                
-            @foreach ($studySets as $studySet)
-                <div class="col-4">
-                    <div class="card mt-5">
-                        <div class="card-header" Style=" background-color: #ffb037; ">
-                            <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
-                                <b> {{ $studySet->title }} </b>
-                            </div>
 
-                        </div>
-                        <div class="card-body ">
-
-                            <blockquote class="blockquote mb-0">
-                                <div class="panel-heading text-center"><b> {{ $studySet->description }} </b>
-
+                @foreach ($studySets as $studySet)
+                    <div class="col-4">
+                        <div class="card mb-2">
+                            <div class="card-header" Style=" background-color: #ffb037; ">
+                                <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
+                                    <b> {{ $studySet->title }} </b>
                                 </div>
 
-                            </blockquote>
-                        </div>
-                    </div>
+                            </div>
+                            <div class="card-body ">
 
-                </div>
-            @endforeach
+                                <blockquote class="blockquote mb-0">
+                                    <div class="panel-heading text-center"><b> {{ $studySet->description }} </b>
+
+                                    </div>
+
+                                </blockquote>
+
+                                {{ Auth::user()->name }}
+                            </div>
+                        </div>
+
+                    </div>
+                @endforeach
             </div>
 
             <!-- JavaScript Bundle with Popper -->

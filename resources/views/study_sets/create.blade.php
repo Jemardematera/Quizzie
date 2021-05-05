@@ -18,7 +18,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home"Style=" color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
+            <a class="navbar-brand" href="/home"
+                Style=" color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,7 +29,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/home" Style=" color: white;  font-size:15px ">
+                        <a class="nav-link active" aria-current="page" href="/home"
+                            Style=" color: white;  font-size:15px ">
                             Home</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -97,29 +99,36 @@
         </div>
     </nav>
 
+    <div class="col-12 mt-5">
+        <div class="container">
 
-    <div class= "container mt-5">
-    <form method="POST"action="{{ route('studysets.store') }}">
-        @csrf
+            <div class="row">
+                <div class="col-6">
+                    <div class="container mt-5">
+                        <form method="POST" action="{{ route('studysets.store') }}">
+                            @csrf
 
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input name="title"type="text" class="form-control" id="title">
-            
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input name="title" type="text" class="form-control" id="title">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input name="description" type="text" class="form-control" id="description">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Create Study Sets</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="/images/12345.gif" style="width: 500px;" />
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <input name= "description"type="text" class="form-control" id="description">
-        </div>
-
-
-      
-    
-        <button type="submit" class="btn btn-primary">Create Study Sets</button>
-    </form>
-
     </div>
-    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
