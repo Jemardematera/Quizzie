@@ -105,7 +105,7 @@
                 <div class="col-4">
                     <div class="card">
                         <div class="card-header"Style = " background-color: #ffb037; ">
-                            <div class="panel-heading text-center" Style = " color: white;  font-size:15px"><b> Total Of Student</b>
+                            <div class="panel-heading text-center" Style = " color: white;  font-size:15px"><b> Total of Study sets</b>
 
                             </div>
 
@@ -125,7 +125,7 @@
                 <div class="col-4">
                     <div class="card">
                         <div class="card-header"Style = " background-color: #ffcc29; ">
-                            <div class="panel-heading text-center"Style = " color: white;  font-size:15px"><b> List of Study sets</b>
+                            <div class="panel-heading text-center"Style = " color: white;  font-size:15px"><b> Total of Class</b>
 
                             </div>
                         </div>
@@ -159,17 +159,16 @@
                 </div>
 
 
-
-
-
-                <div class="col-6 - mt-5">
+                <div class="col-12 - mt-5">
                     <div class="card">
-                        <div class="card-header"Style = " background-color: #206a5d; ">
-                            <div class="panel-heading text-right"Style = " color: white;  font-size:15px"><b>Recent</b>
+                        <div class="card-header"Style = " background-color: white; ">
+                            <div class="panel-heading text-right"Style = " color: #206a5d;  font-size:15px"><b>Recent</b>
 
                             </div>
                         </div>
                         <div class="card-body">
+                    
+                            
                             <blockquote class="blockquote mb-0">
 
                             </blockquote>
@@ -179,23 +178,6 @@
 
                 </div>
 
-
-                <div class="col-6 mt-5">
-                    <div class="card">
-                        <div class="card-header"Style = " background-color: #206a5d; "Style = "images - icon.png">
-                            <div class="panel-heading text-right"Style = " color: white;  font-size:15px"><b>List of Student</b>
-
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-
-                            </blockquote>
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
         </div>
     </div>

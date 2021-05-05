@@ -25,8 +25,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: #38c172;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}"
-                    style="color:  #f58634  !important; font-family: Original Surfer; font-size: 25px">
+                <a class="navbar-brand" href="{{ url('/') }}"style="color:  #f58634  !important; font-family: Original Surfer; font-size: 25px">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"

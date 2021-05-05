@@ -17,8 +17,7 @@
 
         <!-- Styles -->
         <style>
-            .picture {
-                
+            .picture {             
                 height: 100%;
                 color: darkgray;
                 font-family: 'Century', sans-serif;
@@ -62,7 +61,7 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}" style = "color:#f58634 !important; font-family: Original Surfer; font-size: 25px">
+                <a class="navbar-brand" href="{{ url('/') }}" style = "color: white !important; font-family: Original Surfer; font-size: 25px">
                     {{ config('app.name', 'Laravel') }}
      
                 </a>
@@ -121,7 +120,7 @@
            
             <div class="content">
                 <div class="title " Style = "margin-top: 0px; color: #2f5d62; font-family:Microsoft JhengHei UI Light; font-size:100px">
-                    
+                    Quizzie
                     
                 </div>
                 
