@@ -17,7 +17,9 @@
 
         <!-- Styles -->
         <style>
-            .picture {             
+            .picture {  
+
+                background-color: #ffcc29;           
                 height: 100%;
                 color: darkgray;
                 font-family: 'Century', sans-serif;

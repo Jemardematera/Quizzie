@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" Style = " color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
+            <a class="navbar-brand" href="/home" Style = " color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" Style = " color: white;  font-size:15px "> Home</a>
+                        <a class="nav-link active" aria-current="page" href="/home" Style = " color: white;  font-size:15px "> Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -36,7 +36,7 @@
                             Your Library
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Study sets</a></li>
+                            <li><a class="dropdown-item" href="/studysets/all">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
                           
                         </ul>
@@ -47,7 +47,7 @@
                             Create
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Study sets</a></li>
+                            <li><a class="dropdown-item" href="studysets/create">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
                               
                         </ul>
