@@ -145,7 +145,7 @@
                     <div class="card">
                         <div class="card-header" Style=" background-color: #81b214; ">
                             <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
-                                <img src="images/icon.png" style="width: 50px;" />
+                                <img src="images/icons.png" style="width: 50px;" />
                                 <b>Pending Student</b>
 
                             </div>
