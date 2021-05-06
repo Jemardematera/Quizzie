@@ -25,7 +25,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: #38c172;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}"style="color:  #f58634  !important; font-family: Original Surfer; font-size: 25px">
+                <a class="navbar-brand" href="{{ url('/') }}"
+                    style="color:  #1e6f5c  !important; font-family: Original Surfer; font-size: 25px">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -46,12 +47,14 @@
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}"
-                                    style="color: #f58634!important; font-family: Arial; font-size: 15px">{{ __('Login') }}</a>
+                                    style="color: #1e6f5c!important; font-family: Arial; font-size: 15px">{{ __('Login |') }}</a>
                             </li>
-                            @if(Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"
-                                        style="color: #f58634  !important; font-family: Arial; font-size: 15px">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" background-color: #ffe268;
+                                        style="color: #1e6f5c !important; font-family: Arial; font-size: 15px; ">{{ __('Sign Up') }}</a>
+
+
                                 </li>
                             @endif
                         @else
@@ -62,13 +65,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}"
-                                        method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>

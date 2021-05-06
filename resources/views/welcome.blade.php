@@ -18,8 +18,6 @@
     <style>
         .picture {
 
-
-            height: 100%;
             color: darkgray;
             font-family: 'Century', sans-serif;
             font-weight: 200;
@@ -47,7 +45,7 @@
         }
 
         .content {
-            text-align: bottom;
+            text-align: center;
         }
 
         .title {
@@ -65,7 +63,7 @@
     <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}"
-                style="color: white !important; font-family:Arial Narrow; ; font-size: 25px">
+                style="color: white !important; font-family: Original Surfer; ; font-size: 25px">
 
                 {{ config('app.name', 'Laravel') }}
 
@@ -75,7 +73,6 @@
                 aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
@@ -96,7 +93,7 @@
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}"
-                                    style="color: white !important; font-family:Arial; font-size: 15px">{{ __('Register') }}</a>
+                                    style="color: white !important; font-family:Arial; font-size: 15px">{{ __('Sign Up') }}</a>
                             </li>
                         @endif
                     @else
@@ -109,7 +106,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -128,10 +125,15 @@
 
     <div class="picture flex-center position-ref full-height">
 
+
         <div class="content">
-            <img src="images/SCHOOL.gif" style="width: 200px; margin-top: 5px;  " />
-            <div class="title " Style="margin-top: 0px; color: #1e6f5c; font-Comic Sans MS; font-size:100px;">
-                <img src="images/icons.jpg" style="width: 130px;  " />uizzie
+
+            <div class="content">
+
+
+                <div class="title " Style="margin-top: 0px; color: #1e6f5c; font-Comic Sans MS; font-size:100px;">
+                    <img src="images/icons.jpg" style="width: 150px; mx-auto  " />uizzie
+                </div>
 
 
 
@@ -139,15 +141,10 @@
 
 
 
-        </div>
-
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-        </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+                crossorigin="anonymous">
+            </script>
 </body>
 
 </html>

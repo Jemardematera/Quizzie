@@ -50,7 +50,7 @@
                             Create
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Study sets</a></li>
+                            <li><a class="dropdown-item" href="studysets/create">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
 
                         </ul>

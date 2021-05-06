@@ -50,7 +50,7 @@
                             Create
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="studysets/create">Study sets</a></li>
+                            <li><a class="dropdown-item" href="/studysets/create">Study sets</a></li>
                             <li><a class="dropdown-item" href="#">Class</a></li>
 
                         </ul>
@@ -79,8 +79,9 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -96,30 +97,63 @@
         </div>
     </nav>
 
-    <div class="col-12 mt-5">
+
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="background-color: black;">
+            <button class=" nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true"
+                style="margin-top:80px;margin-left:120px;color:#2f5d62;">All
+                Study Sets</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false"
+                style="margin-top:80px;color:#2f5d62;"> Class</button>
+
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    </div>
+
+
+    <div class=" col-12 mt-5">
         <div class="container">
 
             <div class="row">
 
-                @foreach ($studySets as $studySet)
-                    <div class="col-4">
-                        <div class="card mb-2">
-                            <div class="card-header" Style=" background-color: #ffb037; ">
-                                <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
-                                    <b> {{ $studySet->title }} </b>
-                                </div>
 
-                            </div>
-                            <div class="card-body ">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        style="width:300px; font-size:15px; margin-left:485px; Height:50px;">
+                    <button class=" btn btn-outline-success" type="submit"
+                        style="width:60px; font-size:10px">Search</button>
+                </form>
+
+                @foreach ($studySets as $studySet)
+                    <div class="col-8" style=" margin-top:20px;">
+                        <div class="card mb-2">
+
+                            <div class="card-body " style="background-color: #2f5d62; ">
 
                                 <blockquote class="blockquote mb-0">
-                                    <div class="panel-heading text-center"><b> {{ $studySet->description }} </b>
+                                    <div class="panel-heading text-left" style="margin-top:15px; color:white"><b>
+                                            {{ $studySet->title }} </b>
 
                                     </div>
 
                                 </blockquote>
 
-                                {{ Auth::user()->name }}
+                                <div class="panel-heading text-left"
+                                    Style=" color: white;  font-size:15px; margin-bottom:0px; margin-top:20px;  ">
+
+
+                                    {{ Auth::user()->name }}
+
+
+                                </div>
+
                             </div>
                         </div>
 

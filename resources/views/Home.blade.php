@@ -80,7 +80,7 @@
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -98,11 +98,11 @@
 
 
 
-    <div class="col-12 mt-5">
+    <div class="col-12 mt-5 ">
         <div class="container">
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <div class="card">
                         <div class="card-header" Style=" background-color: #ffb037; ">
                             <div class="panel-heading text-center" Style=" color: white;  font-size:15px"><b> Total of
@@ -111,19 +111,17 @@
                             </div>
 
                         </div>
-                        <div class="card-body ">
+                        <div class="card-body" style="height: 100px; margin-top:20px;font-size:30px">
 
-                            <blockquote class="blockquote mb-0">
-                                <div class="panel-heading text-center"><b> 01</b>
+                            <div class=" panel-heading text-center"><b> 23</b>
 
-                                </div>
+                            </div>
 
-                            </blockquote>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <div class="card">
                         <div class="card-header" Style=" background-color: #ffcc29; ">
                             <div class="panel-heading text-center" Style=" color: white;  font-size:15px"><b> Total of
@@ -131,30 +129,29 @@
 
                             </div>
                         </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <div class="panel-heading text-center"><b> 01</b>
+                        <div class="card-body" style="height: 100px; margin-top:20px; font-size:30px">
 
-                                </div>
-                            </blockquote>
+                            <div class="text-center"><b> 15</b>
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
-                <div class="col-4 ">
+                <div class="col-3 ">
                     <div class="card">
                         <div class="card-header" Style=" background-color: #81b214; ">
-                            <div class="panel-heading text-center" Style=" color: white;  font-size:15px">
-                                <img src="images/icons.png" style="width: 50px;" />
-                                <b>Pending Student</b>
+                            <div class="panel-heading text-center" Style=" color:white;  font-size:15px">
+
+                                <b>Total of Members</b>
 
                             </div>
                         </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <div class="panel-heading text-center"><b> 01</b>
+                        <div class="card-body" style="height: 100px; margin-top:20px; font-size:30px">
 
-                                </div>
+                            <div class=" panel-heading text-center"><b> 125</b>
+                            </div>
+
 
                         </div>
                     </div>
@@ -163,66 +160,95 @@
                 </div>
 
 
-                <div class="col-12 - mt-5">
+                <div class="col-3 ">
                     <div class="card">
-                        <div class="card-header" Style=" background-color: white; ">
-                            <div class="panel-heading text-right" Style=" color: #206a5d;  font-size:15px"><b>Recent</b>
+                        <div class="card-header" Style=" background-color: #e9896a; ">
+                            <div class="panel-heading text-center" Style=" color:white;  font-size:15px">
+
+                                <b>Pending Works</b>
 
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height: 100px; margin-top:20px; font-size:30px">
 
-                            <div class="col-12 mt-2">
-                                <div class="container">
+                            <div class=" panel-heading text-center"><b> 10</b>
+                            </div>
 
-                                    <div class="row">
 
-                                        @foreach ($studySets as $studySet)
-                                            <div class="col-4">
-                                                <div class="card mt-2">
-                                                    <div class="card-header" Style=" background-color: #ffb037; ">
-                                                        <div class="panel-heading text-center"
-                                                            Style=" color: white;  font-size:15px">
-                                                            <b> {{ $studySet->title }} </b>
-                                                        </div>
+                        </div>
+                    </div>
 
-                                                    </div>
-                                                    <div class="card-body ">
 
-                                                        <blockquote class="blockquote mb-0">
-                                                            <div class="panel-heading text-center"><b>
-                                                                    {{ $studySet->description }} </b>
+                </div>
 
-                                                            </div>
+                <div class="col-12 mt-2">
+                    <div class="container">
 
-                                                        </blockquote>
+                        <div class="row">
 
-                                                        {{ Auth::user()->name }}
-                                                    </div>
-                                                </div>
+                            <div class="title "
+                                Style="margin-top: 100px; color: #1e6f5c; font-family : Arial Rounded MT Bold; font-size:20px;">
+                                Recent
+
+                                <button type="text" class="btn btn-outline-light "
+                                    style="  font-size:15px; margin-left: 1095px; font-family : Arial Rounded MT Bold; color: #1e6f5c; ">View
+                                    All
+                                    >
+                                </button>
+
+                            </div>
+
+
+                            @foreach ($studySets as $studySet)
+                                <div class="col-4">
+                                    <div class="card mb-100">
+
+                                        <div class="card-header;">
+                                            <div class=" panel-heading text-left"
+                                                Style=" color: white;  font-size:15px">
 
                                             </div>
-                                        @endforeach
+
+                                        </div>
+                                        <div class="card-body " Style=" background-color: #2f5d62;>
+
+                                    <blockquote class=" blockquote mb-0">
+                                            <div class="panel-heading text-left"
+                                                Style=" color: white;  font-size:20px; margin-bottom:40px; margin-top:20px;  ">
+                                                <b>
+                                                    {{ $studySet->title }} </b>
+
+                                            </div>
+
+                                            </blockquote>
+
+                                            <div class="panel-heading text-left"
+                                                Style=" color: white;  font-size:15px; margin-bottom:0px; margin-top:20px;  ">
+
+
+                                                {{ Auth::user()->name }}
+                                            </div>
+
+
+
+
+
+                                        </div>
                                     </div>
 
-
-                                    <blockquote class="blockquote mb-0">
-
-                                    </blockquote>
                                 </div>
-                            </div>
+                            @endforeach
 
 
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-        </script>
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+                crossorigin="anonymous">
+            </script>
 </body>
 
 </html>
