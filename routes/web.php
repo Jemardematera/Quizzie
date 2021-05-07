@@ -20,11 +20,9 @@ Route::get('/', function () {
 
 Route::get('/studysets/create', function () {
     return view('study_sets.create');
-
-
-
-
 });
+
+
 
 Route::post('/studysets/store', function (Request $request) {
     
@@ -68,4 +66,5 @@ Route::get('/home', function () {
     $studySets = StudySet::all();
 
     return view('Home',['studySets' => $studySets]);
+    
 });

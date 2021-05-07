@@ -103,7 +103,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-6">
+                <div class="col-8">
                     <div class="container mt-5">
                         <form method="POST" action="{{ route('studysets.store') }}">
                             @csrf
@@ -124,15 +124,15 @@
 
                     </div>
                 </div>
-                <div class="col-6">
-                    <img src="/images/12345.gif" Style="width: 500px;" />
+                <div class="col-3">
+                    <img src="/images/thinking.gif" Style="width: 300px;" />
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="col-3; mt-5 " style="width:1150px;font-size:10px; font-size:15px; margin-left:130px;">
+    <div class="col-3; mt-0" style="width:1150px;font-size:10px; font-size:15px; margin-left:130px;">
         <div class="card">
             <div class="card-header" Style=" background-color: whitesmoke; ">
                 <div class="panel-heading text-left" Style=" color:#2f5d62;  font-size:20px">
@@ -154,12 +154,12 @@
 
                                 <div class="mb-3">
 
-                                    <input type="text" class="no-outline" placeholder="Enter Term"
-                                        style="height: 50px; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
-
+                                    <input type="text" class="no-outline" placeholder="Enter term"
+                                        style="font-size:25px; font-family:Arial ; outline: none; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
+                                    <label class=" form-label" style="font-size:12px">TERM</label>
                                 </div>
 
-                                <label class=" form-label" style="font-size:15px">TERM</label>
+
 
                             </div>
 
@@ -169,10 +169,12 @@
                                 <div class="mb-3">
 
                                     <input type="text" class="no-outline" placeholder="Enter Definition"
-                                        style="height: 50px; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
+                                        style="font-size:25px; font-family:Arial ; outline: none; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
+                                    <label class=" form-label"
+                                        style="font-size:12px; margin-bottom: 30;">DEFINITION</label>
 
                                 </div>
-                                <label class=" form-label" style="font-size:15px;">DEFINITION</label>
+
 
                             </div>
 
@@ -191,6 +193,8 @@
         CARD
 
     </button>
+
+
 
 
 
