@@ -80,7 +80,7 @@
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -192,12 +192,10 @@
 
                                 <button type="text" class="btn btn-outline-light "
                                     style="  font-size:15px; margin-left: 1095px; font-family : Arial Rounded MT Bold; color: #1e6f5c; ">View
-                                    All
-                                    >
+                                    All >
                                 </button>
 
                             </div>
-
 
                             @foreach ($studySets as $studySet)
                                 <div class="col-4">
