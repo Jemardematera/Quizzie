@@ -13,12 +13,12 @@ class CreateStudySetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('study_sets', function (Blueprint $table) {
-            $table->id();
-            $table->string("title");
-            $table->string("description");
-            $table->timestamps();
-        });
+        // Schema::create('study_sets', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string("title");
+        //     $table->string("description");
+        //     $table->timestamps();
+        // });
     }
 
     /**

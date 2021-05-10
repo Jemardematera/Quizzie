@@ -183,33 +183,34 @@
 
     <div class="card-footer bg-transparent border-success">
 
+        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px; margin-left: 160px">
+            <img src="/images/icons4.png" Style="width: 20px;" >
+        </button>
 
-        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px; margin-left: 160px"><img
-                src="/images/icons4.png" Style="width: 20px;" </button>
+        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;">
+            <img src="/images/icons2.png" Style="width: 20px;"> 
+        </button>
 
-
-            <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
-                    src="/images/icons2.png" Style="width: 20px;" </button>
-                <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
-                        src="/images/icons3.png" Style="width: 20px;" </button>
-                    <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
-                            src="/images/icons1.png" Style="width: 20px;" </button>
+        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;">
+            <img src="/images/icons3.png" Style="width: 20px;"> 
+        </button>
+                    
+        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;">
+            <img src="/images/icons1.png" Style="width: 20px;">
+        </button>
+        
     </div>
 
 
 
 
 
-
-    </script>
     <!-- JavaScript Bundle with Popper -->
-    <script>
+    <script
         src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity = "sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin = "anonymous" >
-
+        crossorigin = "anonymous">
     </script>
-
 
 </body>
 

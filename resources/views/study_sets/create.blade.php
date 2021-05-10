@@ -98,7 +98,6 @@
 
     <div class="col-12 mt-5">
         <div class="container">
-
             <div class="row">
                 <div class="col-8">
                     <div class="container mt-5">
@@ -129,14 +128,22 @@
     </div>
 
 
-    <div class="col-3; mt-0" style="width:1150px;font-size:10px; font-size:15px; margin-left:130px;">
+    
+   <div class="wrapper">
+    <div class="col-3; mt-5" style="width:1150px;font-size:10px; font-size:15px; margin-left:130px;">
         <div class="card">
             <div class="card-header" Style=" background-color: whitesmoke; ">
                 <div class="panel-heading text-left" Style=" color:#2f5d62;  font-size:20px">
-                    <b>1</b>
-                    <img src="/images/2.png" Style="width: 20px; margin-left:1070px;" />
-
-
+                    <div class="d-flex justify-content-center">
+                    
+                        <b>1</b>
+                        <button type="button" class="btn btn-light" 
+                        style="margin-left:1070px; display: inline-block; !important">
+                            <img src="/images/2.png"/"
+                            style="width: 20px;"> 
+                        </button>
+                        
+                    </div>
                 </div>
             </div>
 
@@ -185,12 +192,13 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-light"
+   </div>
+    <button type="button" class="btn btn-light" id="add_button"
         style="background-color: #2f5d62; margin-left:130px;width:1150px;margin-top:10px; margin-Bottom:50px;  color:white;">ADD
         CARD
 
     </button>
-
+    
 
 
 
@@ -198,6 +206,82 @@
     <!-- JavaScript Bundle with Popper -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        var count = 2;
+
+        $('#add_button').click(function(){
+            $('.wrapper').append(`<div class="col-3; mt-5" style="width:1150px;font-size:10px; font-size:15px; margin-left:130px;" id="card-`+ count +`">
+        <div class="card">
+            <div class="card-header" Style=" background-color: whitesmoke; ">
+                <div class="panel-heading text-left" Style=" color:#2f5d62;  font-size:20px">
+                    <div class="d-flex justify-content-center">
+                    
+                        <b>`+count+`</b>
+                        <button type="button" class="btn btn-light" onclick="deleteCard('card-`+ count +`')"
+                        style="margin-left:1070px; display: inline-block; !important">
+                            <img src="/images/2.png"/"
+                            style="width: 20px;"> 
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-body" style="height: 100px; margin-bottom: 20px;">
+
+                <div class="col-12 mt-2">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-6">
+
+                                <div class="mb-3">
+
+                                    <input type="text" class="no-outline" placeholder="Enter term"
+                                        style="font-size:25px; font-family:Arial ; outline: none; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
+                                    <label class=" form-label" style="font-size:12px">TERM</label>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="col-6">
+
+                                <div class="mb-3">
+
+                                    <input type="text" class="no-outline" placeholder="Enter Definition"
+                                        style="font-size:25px; font-family:Arial ; outline: none; color: black ;border-top-style: hidden;border-right-style: hidden; border-left-style: hidden;width: 500px">
+                                    <label class=" form-label"
+                                        style="font-size:12px; margin-bottom: 30;">DEFINITION</label>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>`)
+        count++;
+    });
+
+    function deleteCard(id){
+        $('#'+id).remove();
+    }
+
     </script>
 </body>
 

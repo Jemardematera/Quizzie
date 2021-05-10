@@ -84,7 +84,7 @@
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -139,20 +139,24 @@
 
                         </div>
 
-                        <div class="card-footer bg-transparent border-success">
+                        <div class="card-footer d-flex justify-content-end">
 
+                            <button type="button" class="btn btn-light" style="width: 50px; margin-right: 5px;">
+                                <img src="/images/icons4.png" style="width: 20px;"> 
+                            </button>
 
-                            <button type="button" class="btn btn-light"
-                                Style="width: 50px; margin-right: 5px; margin-left: 160px"><img src="/images/icons4.png"
-                                    Style="width: 20px;" </button>
-                                <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
-                                        src="/images/icons2.png" Style="width: 20px;" </button>
-                                    <button type="button" class="btn btn-light"
-                                        Style="width: 50px; margin-right: 5px;"><img src="/images/icons3.png"
-                                            Style="width: 20px;" </button>
-                                        <button type="button" class="btn btn-light"
-                                            Style="width: 50px; margin-right: 5px;"><img src="/images/icons1.png"
-                                                Style="width: 20px;" </button>
+                            <button type="button" class="btn btn-light" style="width: 50px; margin-right: 5px;">
+                                <img src="/images/icons2.png" Style="width: 20px;">
+                            </button>
+
+                            <button type="button" class="btn btn-light" style="width: 50px; margin-right: 5px;">
+                                <img src="/images/icons3.png" Style="width: 20px;"> 
+                            </button>
+
+                            <button type="button" class="btn btn-light" style="width: 50px;">
+                                <img src="/images/icons1.png" style="width: 20px;"> 
+                            </button>
+
                         </div>
                     </div>
                 </div>

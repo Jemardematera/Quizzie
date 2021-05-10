@@ -33,14 +33,14 @@ Route::post('/studysets/store', function (Request $request) {
     if ($title && $description){
 
        
-        $studyset =new Studyset();
-        $studyset->title = $title;
-        $studyset->description = $description;
-        $studyset->save();
+        // $studyset = new Studyset();
+        // $studyset->title = $title;
+        // $studyset->description = $description;
+        // $studyset->save();
 
-        return redirect('/home');
+        return redirect('/card/create')
+             ->with('title',$title);
     }else {
-
         return redirect('/studysets/create');
     }
     
@@ -73,3 +73,9 @@ Route::get('/home', function () {
 Route::get('/studysets/card', function () {
     return view('study_sets.card');
 });
+
+
+Route::get('/card/create', function () {
+    return view('cards.create');
+});
+
