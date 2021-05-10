@@ -68,3 +68,8 @@ Route::get('/home', function () {
     return view('Home',['studySets' => $studySets]);
     
 });
+
+
+Route::get('/studysets/card', function () {
+    return view('study_sets.card');
+});

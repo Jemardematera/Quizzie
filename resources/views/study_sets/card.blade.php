@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
+
 </head>
 
 <body>
@@ -20,7 +21,6 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/home"
                 Style=" color: white; font-family: Original Surfer; font-size:25px">Quizzie</a>
-
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -31,8 +31,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home"
-                            Style=" color: white;  font-size:15px ">
-                            Home</a>
+                            Style=" color: white;  font-size:15px "> Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -40,8 +39,10 @@
                             Your Library
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/studysets/all">Study sets</a></li>
-                            <li><a class="dropdown-item" href="/Card">Class</a></li>
+                            <li><a class="dropdown-item" href="#">Study sets</a></li>
+
+
+                            <li><a class="dropdown-item" href="/studysets/card">Class</a></li>
 
                         </ul>
                     </li>
@@ -51,13 +52,11 @@
                             Create
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/studysets/create">Study sets</a></li>
-                            <li><a class="dropdown-item" href="">Class</a></li>
+                            <li><a class="dropdown-item" href="studysets/create">Study sets</a></li>
+                            <li><a class="dropdown-item" href="/studysets/card">Class</a></li>
 
                         </ul>
                     </li>
-
-
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -77,6 +76,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" Style=" color: white;  font-size:15px ">
+
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -84,7 +84,7 @@
                                 <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -101,82 +101,116 @@
     </nav>
 
 
-    </nav <div class=" col-12 mt-5">
-    <div class="container">
-
-        <div class="row">
 
 
-            @foreach ($studySets as $studySet)
+    <div class="col-12 mt-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-3">
 
 
-                <div class="col-4" style=" margin-top:50px;margin-bottom:5px;">
-                    <div class="card">
-
-                        <div class="card-header" style="background-color:#f58634; height:10px;" ;>
-
-
-                        </div>
-
-                        <div class=" card-body " style=" background-color: white; height:120px; ">
-
-                            <blockquote class=" blockquote mb-0">
-                                <div class="panel-heading text-left" style="margin-top:15px; color:#2f5d62"><b>
-                                        {{ $studySet->title }} </b>
-
-                                </div>
-
-                            </blockquote>
-
-                            <div class=" panel-heading text-left"
-                                Style=" color: #2f5d62; font-size:15px; margin-bottom:0px; margin-top:20px;">
-
-
-                                {{ Auth::user()->name }}
-
-
-                            </div>
+                    <div id=" sidebar-wrapper">
+                        <div class=" panel-heading text-left"
+                            Style=" color: #2f5d62; font-size:30px; margin-top:50px; margin-left:50px;">
+                            {{ Auth::user()->name }}
 
                         </div>
 
-                        <div class="card-footer bg-transparent border-success">
+                        <div class=" panel-heading text-left"
+                            Style=" color: gray; font-size:20px; margin-top:30px; margin-left:50px;">
+                            Study
+                        </div>
 
 
-                            <button type="button" class="btn btn-light"
-                                Style="width: 50px; margin-right: 5px; margin-left: 160px"><img src="/images/icons4.png"
-                                    Style="width: 20px;" </button>
-                                <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
-                                        src="/images/icons2.png" Style="width: 20px;" </button>
-                                    <button type="button" class="btn btn-light"
-                                        Style="width: 50px; margin-right: 5px;"><img src="/images/icons3.png"
-                                            Style="width: 20px;" </button>
-                                        <button type="button" class="btn btn-light"
-                                            Style="width: 50px; margin-right: 5px;"><img src="/images/icons1.png"
-                                                Style="width: 20px;" </button>
+                        <div id="wrapper" style="margin-top: 10px; margin-left: 50px;">
+
+                            <!-- Sidebar -->
+                            <div id=" sidebar-wrapper">
+
+                            </div <ul class="sidebar-nav">
+                            <li>
+                                <a href=" #" Style=" color: #2f5d62; font-size:25px; ">Flash Card </a>
+                            </li>
+                            <li>
+                                <a href="#" Style=" color: #2f5d62; font-size:25px; ">Learn</a>
+                            </li>
+                            <li>
+                                <a href="#" Style=" color: #2f5d62; font-size:25px; ">Write</a>
+                            </li>
+                            <li>
+                                <a href="#" Style=" color: #2f5d62; font-size:25px; ">Test</a>
+                            </li>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-5">
+                    <div class="card" style="margin-top: 50px;">
+
+
+                        <div class=" card-body" style="height:350px;">
+                            <h5 class="card-title" style="text-align:center; margin-top:150px; ">Special title
+                                treatment
+                            </h5>
+
+
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
+    </div>
 
 
-        <nav aria-label="Page navigation example" style=margin-top:100px;>
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-        </script>
+    <nav aria-label="Page navigation example" style=" margin-left:650px; margin-top:20px;">
+        <ul class=" pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1/3</a></li>
+
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="card-footer bg-transparent border-success">
+
+
+        <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px; margin-left: 160px"><img
+                src="/images/icons4.png" Style="width: 20px;" </button>
+
+
+            <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
+                    src="/images/icons2.png" Style="width: 20px;" </button>
+                <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
+                        src="/images/icons3.png" Style="width: 20px;" </button>
+                    <button type="button" class="btn btn-light" Style="width: 50px; margin-right: 5px;"><img
+                            src="/images/icons1.png" Style="width: 20px;" </button>
+    </div>
+
+
+
+
+
+
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script>
+        src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity = "sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin = "anonymous" >
+
+    </script>
+
+
 </body>
 
 </html>
