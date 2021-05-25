@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Quizzie</title>
+    <title>ADA Drugstore</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -60,7 +60,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #2f5d62;">
+    <nav class="navbar navbar-expand-lg navbar-navbar navbar-red bg- red" style="background-color: #99154e;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}"
                 style="color: white !important; font-family: Original Surfer; ; font-size: 25px">
@@ -106,7 +106,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
